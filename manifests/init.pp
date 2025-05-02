@@ -165,7 +165,7 @@ class supervisord(
 
   if $env_var {
     validate_hash($env_var)
-    $env_hash = hiera($env_var)
+    $env_hash = lookup($env_var)
     $env_string = hash2csv($env_hash)
   }
   elsif $_global_environment {
